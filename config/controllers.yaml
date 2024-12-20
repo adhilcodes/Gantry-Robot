@@ -1,0 +1,19 @@
+gantry_robot:
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  x_position_controller:
+    type: position_controllers/JointPositionController
+    joint: x_prismatic
+    pid: { p: 100.0, i: 0.01, d: 10.0 }
+
+  y_position_controller:
+    type: position_controllers/JointPositionController
+    joint: y_prismatic
+    pid: { p: 100.0, i: 0.01, d: 10.0 }
+
+  z_position_controller:
+    type: position_controllers/JointPositionController
+    joint: z_prismatic
+    pid: { p: 100.0, i: 0.01, d: 10.0 }
